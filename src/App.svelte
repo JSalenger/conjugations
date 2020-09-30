@@ -8,6 +8,7 @@
 	import Create from './Create.svelte';
 	import * as firebase from 'firebase/app';
 	import 'firebase/firestore';
+	import 'firebase/analytics';
 
 	/* Global Vars */
 	let showQuiz = true;
@@ -24,6 +25,7 @@
 	};
 
 	firebase.initializeApp(firebaseConfig);
+	let analytics = firebase.analytics();
 	let db = firebase.firestore();
 </script>
 

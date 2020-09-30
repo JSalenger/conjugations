@@ -40,7 +40,7 @@
             name: name.toLowerCase(),
             definition: definition.toLowerCase(),
             indicPresent: conjugations,
-            verified: false
+            verified: true
         };
 
         const res = await db.collection('verbs').doc(`${name}`).set(data);
